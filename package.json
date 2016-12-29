@@ -1,0 +1,22 @@
+{
+  "name": "home28-raspberrypi",
+  "version": "0.0.1",
+  "description": "Rasberry Pi Vps Intelligent House",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UnderNotic/home28-raspberrypi.git"
+  },
+  "author": "undernotic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UnderNotic/home28-raspberrypi/issues"
+  },
+  "homepage": "https://github.com/UnderNotic/home28-raspberrypi#readme",
+  "devDependencies": {
+    "teamcity-service-messages": "^0.1.8"
+  }
+}
