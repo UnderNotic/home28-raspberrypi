@@ -16,7 +16,13 @@
     "url": "https://github.com/UnderNotic/home28-raspberrypi/issues"
   },
   "homepage": "https://github.com/UnderNotic/home28-raspberrypi#readme",
+  "dependencies": {
+    "koa": "^2.0.0-alpha.7",
+    "koa-router": "^7.1.0",
+    "winston": "^2.3.0",
+    "bluebird": "^3.4.7"
+  },
   "devDependencies": {
-    "teamcity-service-messages": "^0.1.8"
+    "nodemon": "^1.11.0"
   }
 }
