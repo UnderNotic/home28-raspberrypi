@@ -1,5 +1,5 @@
 {
-  "name": "home28-raspberrypi",
+  "name": "home28-raspberrypi server",
   "version": "0.0.1",
   "description": "Rasberry Pi Vps Intelligent House",
   "main": "index.js",

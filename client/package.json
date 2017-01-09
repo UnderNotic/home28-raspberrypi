@@ -1,0 +1,28 @@
+{
+  "name": "home28-raspberrypi client",
+  "version": "0.0.1",
+  "description": "Rasberry Pi Vps Intelligent House",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UnderNotic/home28-raspberrypi.git"
+  },
+  "author": "undernotic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UnderNotic/home28-raspberrypi/issues"
+  },
+  "homepage": "https://github.com/UnderNotic/home28-raspberrypi#readme",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-router": "^3.0.0",
+    "isomorph-fetch": "^15.4.2",
+    "antd": "^2.6.1"
+  },
+  "devDependencies": {
+    "webpack": "^2.2.0-rc.3"
+  }
+}
