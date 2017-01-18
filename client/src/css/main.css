@@ -4,9 +4,9 @@
 }
 
 * {
-    font: var(--body-font) !important;
+    font-family: var(--body-font) !important;
 }
 
 h1, h2, h3, h4, h5, h6{
-    font: var(--header-font) !important;
+    font-family: var(--header-font) !important;
 }

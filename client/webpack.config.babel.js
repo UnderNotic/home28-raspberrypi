@@ -85,7 +85,7 @@ export default () => ({
                     fallbackLoader: "style-loader",
                     loader: [
                         'css-loader?importLoaders=1',
-                        //'postcss-loader'
+                        'postcss-loader'
                     ]
                 })
             },
