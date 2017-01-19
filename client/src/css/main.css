@@ -10,3 +10,36 @@
 h1, h2, h3, h4, h5, h6{
     font-family: var(--header-font) !important;
 }
+
+html,body, #root{
+        height:100%;
+        margin:0;
+        padding:0;
+}
+
+#centered-login-flex{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80%;
+        flex-direction: column
+}
+
+#components-form-demo-normal-login .login-form {
+  max-width: 300px;
+}
+#components-form-demo-normal-login .login-form-forgot {
+  float: right;
+}
+#components-form-demo-normal-login .login-form-button {
+  width: 100%;
+}
+
+#login-btn {
+  width: 100%
+}
+
+#login-logo {
+  font-size: 284px;
+  margin-bottom: 20px
+}

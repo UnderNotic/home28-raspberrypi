@@ -20,7 +20,9 @@
     "koa": "^2.0.0-alpha.7",
     "koa-router": "^7.1.0",
     "winston": "^2.3.0",
-    "bluebird": "^3.4.7"
+    "bluebird": "^3.4.7",
+    "jsonwebtoken": "^7.2.1",
+    "bcrypt-nodejs": "^0.0.3"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"

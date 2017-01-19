@@ -5,7 +5,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build:dev": "webpack",
-    "build:prod": "webpack --config webpack.config.prod.babel.js",
+    "build:prod": "webpack -p --devtool source-map",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

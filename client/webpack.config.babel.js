@@ -53,7 +53,10 @@ export default () => ({
 
         // prints more readable module names in the browser console on HMR updates
         new NamedModulesPlugin(),
-        new CleanWebpackPlugin(['dist'])
+        new CleanWebpackPlugin(['dist']),
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('development')
+        })
     ],
     module: {
         rules: [
