@@ -1,10 +1,11 @@
 {
-  "name": "home28-raspberrypi server",
+  "name": "home28-raspberrypi-server",
   "version": "0.0.1",
   "description": "Rasberry Pi Vps Intelligent House",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --harmony-async-await app/index.js",
+    "debug": "nodemon --inspect --harmony-async-await app/index.js"
   },
   "repository": {
     "type": "git",
@@ -17,12 +18,15 @@
   },
   "homepage": "https://github.com/UnderNotic/home28-raspberrypi#readme",
   "dependencies": {
-    "koa": "^2.0.0-alpha.7",
-    "koa-router": "^7.1.0",
-    "winston": "^2.3.0",
+    "bcrypt-nodejs": "^0.0.3",
     "bluebird": "^3.4.7",
     "jsonwebtoken": "^7.2.1",
-    "bcrypt-nodejs": "^0.0.3"
+    "koa": "^2.0.0-alpha.7",
+    "koa-bodyparser": "^3.2.0",
+    "koa-router": "^7.1.0",
+    "sequelize": "^3.29.0",
+    "sqlite3": "^3.1.8",
+    "winston": "^2.3.0"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
