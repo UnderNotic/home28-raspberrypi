@@ -1,8 +1,10 @@
 const koa = new (require('koa'));
 const bodyParser = require('koa-bodyparser');
-const router = require('./routes/routes');
+const router = require('./middlewares/routes');
+const jwt = require('./middlewares/jwt');
 const port = process.argv[3] || 8080;
-require('./db/dbInit');
+require('./db/db');
+
 koa.use(async (ctx, next) => {
     try {
         const start = new Date();
@@ -17,6 +19,7 @@ koa.use(async (ctx, next) => {
     }
 });
 
+koa.use(jwt.middleware);
 koa.use(bodyParser());
 koa.use(router.routes());
 koa.use(router.allowedMethods());

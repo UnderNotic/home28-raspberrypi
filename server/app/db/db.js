@@ -27,7 +27,7 @@ sequelize
         console.log('Unable to connect to the database:', err);
     });
 
-var User = sequelize.define('user', {
+let Users = sequelize.define('user', {
     login: {
         type: Sequelize.STRING,
         primaryKey: true
@@ -40,15 +40,12 @@ var User = sequelize.define('user', {
     }
 });
 
-User.sync().then(function () {
-    // Table created
-    return User.create({
-        login: 'John',
-        password: 'Hancock',
-        lastAccessed: new Date()
-    });
-});
+Users.sync();
 
-User.findAll().then(function (users) {
+Users.findAll().then(function (users) {
     console.log(users)
 })
+
+module.exports = {
+    Users
+};
