@@ -10,7 +10,7 @@ router.get('/', async ctx => {
 });
 
 router.post('/login', async ctx => {
-    let token = authenticate(ctx.request.body.login, ctx.request.body.password);
+    let token = await authenticate(ctx.request.body.login, ctx.request.body.password);
     if (token) {
         ctx.status = 200;
         ctx.body = {

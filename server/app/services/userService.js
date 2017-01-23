@@ -1,9 +1,8 @@
 const Users = require('../db/db').Users;
 
-async function checkIfExists(login, password) {
-    Users.findAll({ where: { login, password } }).then(res => {
-        console.log("res iss", res)
-        //return res === 1;
+function checkIfExists(login, password) {
+    return Users.findAll({ where: { login, password } }).then(res => {
+        return res.length === 1;
     });
 }
 

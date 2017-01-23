@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 const dbFilePath = require('../utils/configuration').sqliteDbFilePath;
 
 let sqlite3 = require('sqlite3').verbose();
-let db = new sqlite3.Database(dbFilePath);
+new sqlite3.Database(dbFilePath);
 
 let sequelize = new Sequelize('database', 'username', 'password', {
     host: 'localhost',
@@ -41,10 +41,6 @@ let Users = sequelize.define('user', {
 });
 
 Users.sync();
-
-Users.findAll().then(function (users) {
-    console.log(users)
-})
 
 module.exports = {
     Users
