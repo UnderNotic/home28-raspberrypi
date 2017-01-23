@@ -12,8 +12,6 @@ const Login = Form.create()(React.createClass({
         });
     },
     render() {
-        let x = process.env.NODE_ENV;
-        debugger;
         const { getFieldDecorator } = this.props.form;
         return (
             <div id="centered-login-flex">
