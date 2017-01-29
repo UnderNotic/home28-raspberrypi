@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '../css/antd.css';
+import '../css/bootstrap.css';
 import '../css/main.css';
 import { AppContainer } from 'react-hot-loader';
 import Login from './containers/login/login';
