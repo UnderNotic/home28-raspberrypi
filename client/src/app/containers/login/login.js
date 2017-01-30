@@ -5,7 +5,7 @@ export default class Login extends Component {
         let img = require("../../../image/login.png");
         return (
             <div id="centered-login-flex">
-                <img src={img} alt="" />
+                <i className="fa fa-bandcamp" aria-hidden="true"></i>
                 <button type="button" className="btn btn-primary" onClick={console.log}>Login</button>
             </div>
         )
