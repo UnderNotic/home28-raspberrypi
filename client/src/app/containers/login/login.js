@@ -6,6 +6,7 @@ export default class Login extends Component {
         return (
             <div id="centered-login-flex">
                 <i className="fa fa-bandcamp" aria-hidden="true"></i>
+                <img src={img} />
                 <button type="button" className="btn btn-primary" onClick={console.log}>Login</button>
             </div>
         )
