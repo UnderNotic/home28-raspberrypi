@@ -4,11 +4,11 @@
 }
 
 * {
-    font-family: var(--body-font) !important;
+    font-family: var(--body-font);
 }
 
 h1, h2, h3, h4, h5, h6{
-    font-family: var(--header-font) !important;
+    font-family: var(--header-font);
 }
 
 html,body, #root{
