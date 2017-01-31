@@ -1,5 +1,6 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import PurifyPlugin from "purifycss-webpack-plugin";
 import CleanWebpackPlugin from 'clean-webpack-plugin';
 import { HotModuleReplacementPlugin, NamedModulesPlugin } from 'webpack';
 import webpack from 'webpack'
@@ -49,6 +50,10 @@ export default () => ({
         }),
         new ExtractTextPlugin('bundle.css'),
         // enable HMR globally
+        new PurifyPlugin({
+            // Give paths to parse for rules. These should be absolute!
+            paths: ['src/app/**/*.js', 'src/*.html']
+        }),
         new HotModuleReplacementPlugin(),
 
         // prints more readable module names in the browser console on HMR updates
