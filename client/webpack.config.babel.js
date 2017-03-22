@@ -1,6 +1,6 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import PurifyPlugin from "purifycss-webpack-plugin";
+import PurifyPlugin from "purifycss-webpack";
 import CleanWebpackPlugin from 'clean-webpack-plugin';
 import { HotModuleReplacementPlugin, NamedModulesPlugin } from 'webpack';
 import webpack from 'webpack'
