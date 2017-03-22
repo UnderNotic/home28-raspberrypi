@@ -22,7 +22,7 @@ html,body, #root{
         align-items: center;
         justify-content: center;
         height: 80%;
-        flex-direction: column;
+        flex-direction: row;
 }
 
 #components-form-demo-normal-login .login-form {
@@ -35,11 +35,20 @@ html,body, #root{
   width: 100%;
 }
 
-#login-btn {
-  width: 100%
+.login-input {
+  margin: auto;
+  width: 30%;
+  text-align: center;
 }
 
 #login-logo {
-  font-size: 284px;
-  margin-bottom: 20px
+  width: 60%;
+  margin-bottom: 20px;
+  filter: blur(2px);
+}
+
+#login-logo:hover{
+ filter: blur(0px);
+ filter: sepia(100%);
+ cursor: pointer;
 }

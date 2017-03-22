@@ -5,9 +5,15 @@ export default class Login extends Component {
         let img = require("../../../image/login.png");
         return (
             <div id="centered-login-flex">
-                <i className="fa fa-bandcamp" aria-hidden="true"></i>
-                <img src={img} />
-                <button type="button" className="btn btn-primary" onClick={console.log}>Login</button>
+                <form style={{ textAlign: "center" }}>
+                    <img id="login-logo" src={img} />
+                    <div className="form-group">
+                        <input type="login" className="form-control login-input" />
+                    </div>
+                    <div className="form-group">
+                        <input type="password" className="form-control login-input" />
+                    </div>
+                </form>
             </div>
         )
     }

@@ -5,6 +5,7 @@ import CleanWebpackPlugin from 'clean-webpack-plugin';
 import { HotModuleReplacementPlugin, NamedModulesPlugin } from 'webpack';
 import webpack from 'webpack'
 import path from 'path';
+import glob from 'glob';
 
 export default () => ({
     entry: {
@@ -52,7 +53,7 @@ export default () => ({
         // enable HMR globally
         new PurifyPlugin({
             // Give paths to parse for rules. These should be absolute!
-            paths: ['src/app/**/*.js', 'src/*.html']
+            paths: glob.sync(path.join(__dirname, 'src/app/**/*.js')).concat(glob.sync(path.join(__dirname, 'src/*.html')))
         }),
         new HotModuleReplacementPlugin(),
 
@@ -90,7 +91,7 @@ export default () => ({
                 test: /\.css$/,
                 exclude: /node_modules/,
                 loader: ExtractTextPlugin.extract({
-                    fallbackLoader: "style-loader",
+                    fallback: "style-loader",
                     loader: [
                         'css-loader?importLoaders=1',
                         'postcss-loader'
