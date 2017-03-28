@@ -3,7 +3,7 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import PurifyPlugin from "purifycss-webpack";
 import CleanWebpackPlugin from 'clean-webpack-plugin';
 import { HotModuleReplacementPlugin, NamedModulesPlugin } from 'webpack';
-import webpack from 'webpack'
+import webpack from 'webpack';
 import path from 'path';
 import glob from 'glob';
 
@@ -32,6 +32,9 @@ export default () => ({
         // necessary for HMR to know where to load the hot update chunks
         publicPath: '/'
     },
+    resolve: {
+        extensions: ['.js', '.jsx']
+    },
     devtool: 'inline-source-map',
     devServer: {
         hot: true,
@@ -53,7 +56,7 @@ export default () => ({
         // enable HMR globally
         new PurifyPlugin({
             // Give paths to parse for rules. These should be absolute!
-            paths: glob.sync(path.join(__dirname, 'src/app/**/*.js')).concat(glob.sync(path.join(__dirname, 'src/*.html')))
+            paths: glob.sync(path.join(__dirname, 'src/app/**/*.jsx')).concat(glob.sync(path.join(__dirname, 'src/*.html')))
         }),
         new HotModuleReplacementPlugin(),
 
@@ -67,7 +70,7 @@ export default () => ({
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: [
                     {
@@ -111,6 +114,6 @@ export default () => ({
             }
         ]
     }
-})
+});
 
 //api urls in webpack global variables
