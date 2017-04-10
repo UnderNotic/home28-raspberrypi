@@ -25,4 +25,8 @@ router.post('/login', async ctx => {
     }
 });
 
+router.get('/isAuthenticated', async ctx => {
+    ctx.body = ctx.stare.user ? true : false;
+});
+
 module.exports = router;

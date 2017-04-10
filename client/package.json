@@ -5,7 +5,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build:dev": "webpack",
-    "build:prod": "webpack -p --devtool source-map",
+    "build:prod": "webpack -p --devtool source-map --env=production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,14 +21,14 @@
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.6",
     "font-awesome": "^4.7.0",
-    "isomorphic-fetch": "^2.2.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-hot-loader": "^3.0.0-beta.6",
     "redux": "^3.6.0",
     "react-redux": "^5.0.3",
-    "react-router-dom": "^4.0.0",
-    "redux-thunk": "^2.2.0"
+    "redux-logger": "^3.0.1",
+    "redux-thunk": "^2.2.0",
+    "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
     "babel-core": "^6.24.0",
@@ -57,11 +57,5 @@
     "url-loader": "^0.5.8",
     "webpack": "^2.3.1",
     "webpack-dev-server": "^2.4.2"
-  },
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "rules": {
-      "semi": 2
-    }
   }
 }

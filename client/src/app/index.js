@@ -4,25 +4,28 @@ import '../css/bootstrap.css';
 import '../css/font-awesome.css';
 import '../css/main.css';
 import { AppContainer } from 'react-hot-loader';
-import Login from './containers/login/Login';
+import Root from './containers/login/Authentication';
+import configureStore from './redux/configureStore';
+import { Provider } from 'react-redux';
 
-import { createStore, applyMiddleware } from 'redux';
-import createSagaMiddleware from 'redux-saga';
+const store = configureStore();
 
 const render = (Component) => {
     ReactDOM.render(
         <AppContainer>
-            <Component />
+            <Provider store={store}>
+                <Component />
+            </Provider>
         </AppContainer>,
         document.getElementById('root')
     );
 };
 
-render(Login);
+render(Root);
 
 if (module.hot) {
-    module.hot.accept('./containers/login/Login', () => {
-        const NewApp = require('./containers/login/Login').default;
+    module.hot.accept('./containers/login/Authentication', () => {
+        const NewApp = require('./containers/login/Authentication').default;
         render(NewApp);
     });
 }

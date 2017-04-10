@@ -10,6 +10,7 @@ const App = () => (
         </main>
         <footer>footer</footer>
     </div>
+
 );
 
 export default App;

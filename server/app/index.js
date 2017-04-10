@@ -1,8 +1,9 @@
 const koa = new (require('koa'));
 const bodyParser = require('koa-bodyparser');
+const cors = require('koa-cors');
 const router = require('./middlewares/routes');
 const jwt = require('./middlewares/jwt');
-const port = process.argv[3] || 8080;
+const port = process.argv[3] || 3000;
 require('./db/db');
 
 koa.use(async (ctx, next) => {
@@ -19,6 +20,7 @@ koa.use(async (ctx, next) => {
     }
 });
 
+koa.use(cors());
 koa.use(jwt.middleware);
 koa.use(bodyParser());
 koa.use(router.routes());
