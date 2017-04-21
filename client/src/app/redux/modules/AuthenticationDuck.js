@@ -8,7 +8,7 @@ const TOKEN_INVALID = 'containers/login/TOKEN_INVALID';
 
 // Reducer
 export default function reducer(state = {
-    isFetching: false,
+    isFetching: true,
     isFailing: false,
     isAuthenticated: false,
     error: ""

@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --harmony-async-await app/index.js",
-    "debug": "nodemon --inspect --harmony-async-await app/index.js"
+    "debug": "nodemon --inspect --harmony-async-await app/index.js",
+    "test": "ava",
+    "test:watch": "ava --watch",
+    "test:debug": "node --inspect node_modules/ava/profile.js some/test/file.js"
   },
   "repository": {
     "type": "git",
@@ -22,15 +25,16 @@
     "bluebird": "^3.4.7",
     "jsonwebtoken": "^7.2.1",
     "koa": "^2.0.0-alpha.7",
-    "koa-cors": "^0.0.16",
     "koa-bodyparser": "^3.2.0",
-    "koa-router": "^7.1.0",
+    "koa-cors": "^0.0.16",
     "koa-jwt": "^2.1.0",
+    "koa-router": "^7.1.0",
     "sequelize": "^3.29.0",
     "sqlite3": "^3.1.8",
     "winston": "^2.3.0"
   },
   "devDependencies": {
+    "ava": "^0.19.1",
     "nodemon": "^1.11.0"
   }
 }

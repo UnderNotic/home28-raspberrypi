@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const userService = require('../services/userService');
+const userService = require('../user/userService');
 const key = require('../middlewares/jwt').privateKey;
 
 module.exports = async (login, password) => {

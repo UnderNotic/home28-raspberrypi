@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MainPage from '../mainPage/MainPage';
+import Main from '../main/Main';
 import Login from '../../components/Login';
 import CenteredMsg from '../../components/CenteredMessage';
 import url from '../../utils/url';
@@ -14,7 +14,7 @@ class Authentication extends Component {
 
     render() {
         const { isFetching, isFailing, isAuthenticated, isLoginSuccessful, error, onLoginClick } = this.props;
-        return isFetching ? null : (isAuthenticated || isLoginSuccessful) ? <MainPage /> : isFailing ? <CenteredMsg title="Error" text={error} /> : <Login onLoginClick={onLoginClick} />;
+        return isFetching ? null : (isAuthenticated || isLoginSuccessful) ? <Main /> : isFailing ? <CenteredMsg title="Error" text={error} /> : <Login onLoginClick={onLoginClick} />;
     }
 }
 

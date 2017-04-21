@@ -4,6 +4,12 @@ const cors = require('koa-cors');
 const router = require('./middlewares/routes');
 const jwt = require('./middlewares/jwt');
 const port = process.argv[3] || 3000;
+
+
+/*
+
+
+
 require('./db/db');
 
 koa.use(async (ctx, next) => {
@@ -37,3 +43,5 @@ koa.listen(port, () => {
 //         process.exit(err ? 1 : 0);
 //     });
 // });
+
+*/

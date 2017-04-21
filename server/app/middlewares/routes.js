@@ -1,6 +1,6 @@
 const router = new (require('koa-router'));
 const readFileAsync = (require('bluebird')).promisify(require("fs").readFile);
-const authenticate = require('./authenticate');
+const authenticate = require('../user/authenticate');
 
 router.get('/', async ctx => {
     let body = Object.assign(

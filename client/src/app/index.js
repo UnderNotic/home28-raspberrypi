@@ -5,10 +5,8 @@ import '../css/font-awesome.css';
 import '../css/main.css';
 import { AppContainer } from 'react-hot-loader';
 import Root from './containers/login/Authentication';
-import configureStore from './redux/configureStore';
+import store from './redux/store';
 import { Provider } from 'react-redux';
-
-const store = configureStore();
 
 const render = (Component) => {
     ReactDOM.render(
