@@ -1,3 +1,5 @@
+.suo
+VSWorkspaceState.json
 yarn.lock
 *.sqlite
 *.db
