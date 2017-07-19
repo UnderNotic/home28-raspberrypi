@@ -10,3 +10,4 @@ export default ({ title, text }) => (
         </div>
     </div>
 );
+                                                                                                                                            

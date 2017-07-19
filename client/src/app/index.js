@@ -8,11 +8,11 @@ import Root from './containers/login/Authentication';
 import store from './redux/store';
 import { Provider } from 'react-redux';
 
-const render = (Component) => {
+const render = (Component) => {            
     ReactDOM.render(
         <AppContainer>
             <Provider store={store}>
-                <Component />
+                    <Component />
             </Provider>
         </AppContainer>,
         document.getElementById('root')
