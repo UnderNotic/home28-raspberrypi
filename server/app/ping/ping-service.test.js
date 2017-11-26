@@ -1,5 +1,5 @@
 const test = require('ava');
-const ping = require('../ping/pingService');
+const ping = require('../ping/ping-service');
 
 // test('single *', t => {
 //     const result = ping("192.168.0.*");
